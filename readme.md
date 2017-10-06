@@ -10,6 +10,10 @@ Simple starter C++ project with:
 - cmake
 - googletest
 
+## License
+
+This software is released under the BSD-2 License, see LICENSE.txt
+
 ## Standard install via command-line
 ```
 git clone --recursive https://github.com/dpiet/cpp-boilerplate
