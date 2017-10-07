@@ -12,7 +12,12 @@ Simple starter C++ project with:
 
 ## License
 
-This software is released under the BSD-2 License, see LICENSE.txt
+This software is released under the BSD-2 License, see LICENSE.txt.
+
+## Product Backlog, Iteration Backlogs & Work Log
+
+Link to google spreadsheets: https://docs.google.com/spreadsheets/d/1L3S5S-xUDZFRZburYVNjMFN7-COTC3OJuEMe_ykktyQ/edit?usp=sharing
+
 
 ## Standard install via command-line
 ```
