@@ -5,10 +5,7 @@
 
 ## Overview
 
-Simple starter C++ project with:
-
-- cmake
-- googletest
+Implementation of A* path planning algorithm in C++.
 
 ## License
 
