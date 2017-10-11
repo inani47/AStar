@@ -1,4 +1,4 @@
-# C++ Boilerplate
+# A Star Path Planning Algorithm
 [![Build Status](https://travis-ci.org/inani47/AStar.svg?branch=master)](https://travis-ci.org/inani47/AStar)
 [![Coverage Status](https://coveralls.io/repos/github/inani47/AStar/badge.svg?branch=master)](https://coveralls.io/github/inani47/AStar?branch=master)
 ---
