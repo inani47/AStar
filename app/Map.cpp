@@ -41,6 +41,7 @@
  *  @copyright 2017
  */
 #include <Map.h>
+#include <vector>
 /**
  *
  * @brief creates a 10x10 map with obstacles placed randomly
@@ -53,13 +54,11 @@
  */
 std::vector<std::vector<int> > Map::createMap() {
   std::vector<std::vector<int> > vec(10, std::vector<int>(10, 1));
-
-  std::random_device rd;     // used to initialize (seed) engine
-  std::mt19937 rng(rd());  // random-number engine used (Mersenne-Twister)
-  std::uniform_int_distribution<int> uni(0, 9);  // guaranteed unbiased
+  std::random_device rd; /* used to initialize (seed) engine*/
+  std::mt19937 rng(rd()); /* random-number engine used (Mersenne-Twister)*/
+  std::uniform_int_distribution<int> uni(0, 9); /* guaranteed unbiased*/
   int i = 20;
   while (i != 0) {
-
     vec[uni(rng)][uni(rng)] = 0;
     --i;
   }
@@ -90,9 +89,9 @@ std::vector<std::vector<int> > Map::createMap() {
 void Map::printPath(std::vector<std::vector<int> > _map,
                     std::vector<int> path,
                     int sx, int sy, int gx, int gy) {
-  if (path[0] == -1)
+  if (path[0] == -1) {
     return;
-  else {
+  } else {
     std::vector<int> moveX { 1, 1, 0, -1, -1, -1, 0, 1 };
     std::vector<int> moveY { 0, 1, 1, 1, 0, -1, -1, -1 };
     int a = 0, b = 0;

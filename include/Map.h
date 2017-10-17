@@ -53,4 +53,4 @@ class Map {
   void printPath(std::vector<std::vector<int> >, std::vector<int>,
                              int, int, int, int);
 };
-#endif
+#endif  // INCLUDE_MAP_H_

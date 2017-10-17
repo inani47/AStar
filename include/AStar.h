@@ -48,18 +48,15 @@
 #include <vector>
 #include <Node.h>
 #include <Map.h>
-using namespace std;
 class AStar {
  public:
-
   int startx;
   int starty;
   int goalx;
   int goaly;
-
   AStar(int _startx, int _starty, int _goalx, int _goaly);
   friend bool operator>(const Node&, const Node&);
   std::vector<int> pathFind(std::vector<std::vector<int> > vec);
   ~AStar();
 };
-#endif
+#endif  // INCLUDE_ASTAR_H_

@@ -41,6 +41,7 @@
  *  @copyright 2017
  */
 #include <gtest/gtest.h>
+#include <vector>
 #include "../include/Node.h"
 #include "../app/Node.cpp"
 #include "../include/AStar.h"
@@ -53,7 +54,7 @@
  * Checks if Heuristic function is returning the
  * expected distance value
  */
-TEST(HeuristicTest,CheckCalculatedDistance) {
+TEST(HeuristicTest, CheckCalculatedDistance) {
   Node node(10, 10, 25, 50);
   int x = 10, y = 10;
   ASSERT_EQ(node.heuristic(x, y), 0);
@@ -64,7 +65,7 @@ TEST(HeuristicTest,CheckCalculatedDistance) {
  * Checks if the function is returning the
  * expected value of path cost
  */
-TEST(PathCostTest,CheckPathCostCalculation) {
+TEST(PathCostTest, CheckPathCostCalculation) {
   Node node(10, 10, 0, 50);
   int i = 1;
 
@@ -76,7 +77,7 @@ TEST(PathCostTest,CheckPathCostCalculation) {
  * Checks if function is returning the
  * expected value of the total function cost
  */
-TEST(TotalCostTest,FIsGreater) {
+TEST(TotalCostTest, FIsGreater) {
   Node node(10, 10, 20, 20);
   int a = 0, b = 0;
   ASSERT_GE(node.fCal(a, b), node.pathCost);
@@ -97,7 +98,7 @@ TEST(OperatorTest, TestMinPriorityQ) {
  * If goal node is blocked path won't be found
  *
  */
-TEST(GoalBlocked,PathNotFound) {
+TEST(GoalBlocked, PathNotFound) {
   AStar demo(0, 0, 9, 9);
   Map map;
   std::vector<std::vector<int>> m = map.createMap();
@@ -113,10 +114,9 @@ TEST(GoalBlocked,PathNotFound) {
  * be an obstacle
  *
  */
-TEST(StartWalkable,MapValueIsOne) {
+TEST(StartWalkable, MapValueIsOne) {
   Map map;
   std::vector<std::vector<int>> m = map.createMap();
   ASSERT_EQ(1, m[0][0]);
 }
-
 

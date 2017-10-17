@@ -39,6 +39,9 @@
  *  @copyright 2017
  */
 #include <AStar.h>
+#include <functional>
+#include <vector>
+#include <queue>
 /**
  *
  *  @brief Constructor for initializing goal and start coordinates
@@ -53,7 +56,6 @@ AStar::AStar(int _startx, int _starty, int _goalx, int _goaly)
       goalx(_goalx),
       goaly(_goaly) {
 }
-
 /**
  *
  * @brief overloads the '>' operator
@@ -66,7 +68,6 @@ AStar::AStar(int _startx, int _starty, int _goalx, int _goaly)
  * @return true if the total cost of p is greater, else false
  *
  */
-
 bool operator>(const Node & p, const Node & q) {
   return p.totalCost > q.totalCost;
 }
@@ -82,18 +83,19 @@ bool operator>(const Node & p, const Node & q) {
  * @return path with parent directions from start to goal
  *
  */
-
   std::vector<int> AStar::pathFind(std::vector<std::vector<int> > vec) {
   int neighbours = 8; /* max no of possible neighbors for any node*/
-  std::vector<int> moveX { 1, 1, 0, -1, -1, -1, 0, 1 }; /* possible moves in x directions */
-  std::vector<int> moveY { 0, 1, 1, 1, 0, -1, -1, -1 }; /* possible moves in y direction */
+  /* possible moves in x direction and
+   * possible moves in y directions */
+  std::vector<int> moveX { 1, 1, 0, -1, -1, -1, 0, 1 };
+  std::vector<int> moveY { 0, 1, 1, 1, 0, -1, -1, -1 };
   std::vector<int> path;
   int j;
-  priority_queue<Node, std::vector<Node>, greater<Node> > ol; /* stores Nodes ordered by priority */
-  priority_queue<Node, std::vector<Node>, greater<Node> > temp;
-  std::vector<std::vector<int> > open(10, std::vector<int>(10, 0)); /* stores list of unexpanded nodes */
-  std::vector<std::vector<int> > visited(10, std::vector<int>(10, 0)); /*stores list of expanded nodes */
-  std::vector<std::vector<int> > parentDir(10, std::vector<int>(10, 0)); /* stores the direction of parent of each node */
+  std::priority_queue<Node, std::vector<Node>, std::greater<Node> > ol;
+  std::priority_queue<Node, std::vector<Node>, std::greater<Node> > temp;
+  std::vector<std::vector<int> > open(10, std::vector<int>(10, 0));
+  std::vector<std::vector<int> > visited(10, std::vector<int>(10, 0));
+  std::vector<std::vector<int> > parentDir(10, std::vector<int>(10, 0));
   Node start(startx, starty, 0, 0);
   start.totalCost = start.fCal(goalx, goaly);
   ol.push(start);
@@ -121,7 +123,6 @@ bool operator>(const Node & p, const Node & q) {
     }
     /* This loop expands the current node and
      * calculates the costs for all the neighbours. */
-
   int dir = 0;
   while (dir < 8) {
       int dx = current.x + moveX[dir], dy = current.y + moveY[dir];
@@ -138,11 +139,10 @@ bool operator>(const Node & p, const Node & q) {
           open[dx][dy] = child.totalCost;
           ol.push(child);
           parentDir[dx][dy] = (dir + neighbours / 2) % neighbours;
-      }
         /* If the node exists in open list but has more
          * promising total cost then it is replaced by
          * the previous node and it's parent direction is updated.*/
-      else if (open[dx][dy] > child.totalCost) {
+        } else if (open[dx][dy] > child.totalCost) {
           open[dx][dy] = child.totalCost;
           parentDir[dx][dy] = (dir + 8 / 2) % 8;
         while (!(ol.top().x == dx && ol.top().y == dy)) {

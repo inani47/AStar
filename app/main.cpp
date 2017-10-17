@@ -38,6 +38,7 @@
 #include <Node.h>
 #include <AStar.h>
 #include <Map.h>
+#include <vector>
 
 int main() {
   Map map;

@@ -42,12 +42,10 @@
  *  @author Pranav Inani
  *  @copyright 2017
  */
-
 #ifndef INCLUDE_NODE_H_
 #define INCLUDE_NODE_H_
 #include <cmath>
 class Node {
-
  public:
   int totalCost, pathCost;
   int x, y;
@@ -57,4 +55,4 @@ class Node {
   int fCal(int, int);
   ~Node();
 };
-#endif
+#endif  // INCLUDE_NODE_H_
