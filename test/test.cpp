@@ -119,4 +119,42 @@ TEST(StartWalkable, MapValueIsOne) {
   std::vector<std::vector<int>> m = map.createMap();
   ASSERT_EQ(1, m[0][0]);
 }
-
+/**
+ * @brief Unit test to check if path is found
+ *
+ * If a path is found printPath function
+ * should return 1
+ *
+ */
+TEST(PathFound, ReturnOneIfFound) {
+  int j;
+  Map map;
+  std::vector<std::vector<int>> m = map.createMap();
+  AStar demo(0, 0, 9, 9);
+  std::vector<int> sol;
+  sol = demo.pathFind(m);
+  j = map.printPath(m, sol, 0, 0, 9, 9);
+  if (!(sol[0] == -1)) {
+    ASSERT_EQ(1, j);
+  }
+}
+/**
+ * @brief Unit test to check if path is not found
+ *
+ * If a path is not found printPath function
+ * should return -1
+ *
+ */
+TEST(PathNotFound, ReturnMinusOneIfNotFound) {
+  int j;
+  Map map;
+  std::vector<std::vector<int>> m = map.createMap();
+  m[9][9] = 0;
+  AStar demo(0, 0, 9, 9);
+  std::vector<int> sol;
+  sol = demo.pathFind(m);
+  j = map.printPath(m, sol, 0, 0, 9, 9);
+  if ((sol[0] == -1)) {
+    ASSERT_EQ(-1, j);
+  }
+}
