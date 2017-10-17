@@ -86,11 +86,11 @@ std::vector<std::vector<int> > Map::createMap() {
  * @return none
  *
  */
-void Map::printPath(std::vector<std::vector<int> > _map,
+int Map::printPath(std::vector<std::vector<int> > _map,
                     std::vector<int> path,
                     int sx, int sy, int gx, int gy) {
   if (path[0] == -1) {
-    return;
+    return -1;
   } else {
     std::vector<int> moveX { 1, 1, 0, -1, -1, -1, 0, 1 };
     std::vector<int> moveY { 0, 1, 1, 1, 0, -1, -1, -1 };
@@ -118,4 +118,5 @@ void Map::printPath(std::vector<std::vector<int> > _map,
       std::cout << std::endl;
     }
   }
+  return 1;
 }

@@ -50,7 +50,7 @@
 class Map {
  public:
   std::vector<std::vector<int> > createMap();
-  void printPath(std::vector<std::vector<int> >, std::vector<int>,
+  int printPath(std::vector<std::vector<int> >, std::vector<int>,
                              int, int, int, int);
 };
 #endif  // INCLUDE_MAP_H_
