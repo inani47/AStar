@@ -6,24 +6,24 @@
 #include "../include/Map.h"
 #include "../app/Map.cpp"
 
-TEST(HeuristicTest,Equal) {
+TEST(HeuristicTest,CheckCalculatedDistance) {
   Node node(10, 10, 25, 50);
   int x = 10, y = 10;
   ASSERT_EQ(node.heuristic(x, y), 0);
 }
-TEST(PathCostTest,NotEqual) {
+TEST(PathCostTest,CheckPathCostCalculation) {
   Node node(10, 10, 0, 50);
   int i = 1;
 
   ASSERT_NE(node.gCal(i), 10);
 }
-TEST(TotalCostTest,Greater) {
+TEST(TotalCostTest,FIsGreater) {
   Node node(10, 10, 20, 20);
   int a = 0, b = 0;
   ASSERT_GE(node.fCal(a, b), node.pathCost);
 }
 
-TEST(OperatorTest, Greater) {
+TEST(OperatorTest, TestMinPriorityQ) {
   Node n1(1, 2, 23, 45), n3(23, 5, 12, 23);
   ASSERT_TRUE(n1 > n3);
 }
