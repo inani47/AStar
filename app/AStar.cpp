@@ -162,10 +162,10 @@ bool operator>(const Node & p, const Node & q) {
 }
   std::cout << "Path not found. Start blocked or goal is an obstacle"
             << std::endl;
+  std::cout << "Run app again" << std::endl;
   path = {-1};
   return path;
 }
-
 AStar::~AStar() {
 }
 

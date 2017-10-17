@@ -46,5 +46,8 @@ int main() {
   AStar demo(0, 0, 9, 9);
   std::vector<int> sol;
   sol = demo.pathFind(m);
-  map.printPath(m, sol, 0, 0, 9, 9);
+  int q = map.printPath(m, sol, 0, 0, 9, 9);
+  if (q == 1) {
+    std::cout << "Path Found" << std::endl;
+  }
 }
