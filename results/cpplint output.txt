@@ -1,0 +1,12 @@
+../cpplint.py --extensions=h,hpp,cpp $( find . -name *.h -or -name *.hpp -or -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
+Done processing ./include/Map.h
+Done processing ./include/AStar.h
+Done processing ./include/Node.h
+Done processing ./test/main.cpp
+Done processing ./test/test.cpp
+Done processing ./app/main.cpp
+Done processing ./app/Node.cpp
+Done processing ./app/Map.cpp
+Done processing ./app/AStar.cpp
+Total errors found: 0
+
