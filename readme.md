@@ -7,6 +7,16 @@
 
 Implementation of A* path planning algorithm in C++.
 
+The purpose of this project is the design and development of a module that implements the A* path planning algorithm. The A* is a heuristic function based algorithm that is guaranteed to find the shortest path between two points with multiple nodes in between and does so with high performance and accuracy. The A* algorithm solves for the shortest distance by giving priority to the evaluation of those nodes that are likely to lead us to the destination with lower cost. This is done by weighing each path with a cost function which is the sum of two terms. The first term is the total cost incurred to move from start goal to the current node and the second term is the distance between the current node and the destination. The path with the smallest cost function gives the optimal solution.
+
+The module was implemented using three classes: Map, Node and AStar. The map class has a createMap method that creates a map of size 10x10 with twenty randomly placed object. Once the start and end nodes are defined in the AStar class, the pathFind method finds the optimal path from start node to the end node, if it exists. It uses the pathCost, totalCost and Heuristic methods of the node class to do this. Once the path is found the printPath method of Map class prints the final solution.
+
+The project was programmed in the C++ programming language and uses with C++ 11/14 features. The code follows the Google C++ Styleguide with cpplint validation. Cppcheck was also used for static code analysis. This project followed Test_driven Development to guide implementation and uses unit tests to test the code coverage written using Google Test framework. The entire code was written and debugged using the Eclipse IDE. The code follows doxygen-formatted comments to aid doxygen documentation.
+ 
+The project was completed in two weeks time. The source code will use no external libraries. This project was implemented by following the Solo Iterative Process(SIP). This included the creation of a product backlog using the requirements and ordering them in the order of their priority. Finally, the software was developed over two sprints which were one week long in duration. The first week focused on the planning and design of the project inculding the initial UML diagrams. The second week involved the programming of the actual module.
+
+
+
 ## License
 
 This software is released under the BSD-2 License, see [LICENSE.txt](LICENSE.txt).
@@ -24,19 +34,17 @@ mkdir build
 cd build
 cmake ..
 make
-Run tests: ./test/cpp-test
-Run program: ./app/shell-app
 ```
 ## Running the Demo
 
-Follow the build instructions then run the following command from the build directory:
+Follow the build instructions, then run the following command from the build directory:
 ```
 ./app/shell-app
 ```
 
 ## Running Unit Tests
 
-Follow the build instructions then run the following command from the build directory:
+Follow the build instructions, then run the following command from the build directory:
 ```
 ./test/cpp-test
 ```
@@ -44,13 +52,18 @@ Follow the build instructions then run the following command from the build dire
 
 ## Generating Doxygen Documentation
 
-In your cloned directory run the following command from terminal:
+To install doxygen run the following command: 
+```
+sudo apt-get install doxygen
+```
 
-```bash
+Now from your cloned directory, run the following command:
+
+```
 doxygen Doxygen
 ```
 
-- Doxygen files will be generated to /docs folder
+Doxygen files will be generated to /docs folder
 
 
 
