@@ -68,10 +68,18 @@ sudo apt-get install doxygen
 Now from your cloned directory, run the following command:
 
 ```
-doxygen Doxygen
+doxygen AStar.config
 ```
 
 Doxygen files will be generated to /docs folder
+
+To view them in a browser:
+```
+cd Docs
+cd html
+google-chrome index.html
+```
+
 
 
 
