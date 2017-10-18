@@ -1,0 +1,154 @@
+\hypertarget{test_8cpp}{}\section{test/test.cpp File Reference}
+\label{test_8cpp}\index{test/test.\+cpp@{test/test.\+cpp}}
+
+
+Contains Unit tests.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}../include/\+Node.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../app/\+Node.\+cpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/\+A\+Star.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../app/\+A\+Star.\+cpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/\+Map.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../app/\+Map.\+cpp\char`\"{}}\\*
+Include dependency graph for test.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{test_8cpp_a57cac6e439db434ca1213372c5f6b873}{T\+E\+ST} (Heuristic\+Test, Check\+Calculated\+Distance)
+\begin{DoxyCompactList}\small\item\em Unit test for Heuristic Calculation. \end{DoxyCompactList}\item 
+\hyperlink{test_8cpp_a2bb99463b6ac087913c231778e0b714c}{T\+E\+ST} (Path\+Cost\+Test, Check\+Path\+Cost\+Calculation)
+\begin{DoxyCompactList}\small\item\em Unit test for path cost calculation. \end{DoxyCompactList}\item 
+\hyperlink{test_8cpp_a9b0631f71faa4616d77d30304433b60b}{T\+E\+ST} (Total\+Cost\+Test, F\+Is\+Greater)
+\begin{DoxyCompactList}\small\item\em Unit test total function cost calculation. \end{DoxyCompactList}\item 
+\hyperlink{test_8cpp_a1036e70cf8f103cd4ded740c4ace372f}{T\+E\+ST} (Operator\+Test, Test\+Min\+PriorityQ)
+\begin{DoxyCompactList}\small\item\em Unit test for checking the overloaded \textquotesingle{}$>$\textquotesingle{} operator. \end{DoxyCompactList}\item 
+\hyperlink{test_8cpp_a59329afeb275aab7cb4f7a39168f2779}{T\+E\+ST} (Goal\+Blocked, Path\+Not\+Found)
+\begin{DoxyCompactList}\small\item\em Unit test to check if goal node is blocked. \end{DoxyCompactList}\item 
+\hyperlink{test_8cpp_a114fc18553609e0ae6fbbed847b320a0}{T\+E\+ST} (Start\+Walkable, Map\+Value\+Is\+One)
+\begin{DoxyCompactList}\small\item\em Unit test to check if start node is walkable. \end{DoxyCompactList}\item 
+\hyperlink{test_8cpp_a6cb5e3cfec6c4f38a6be2a24046fcf6d}{T\+E\+ST} (Path\+Found, Return\+One\+If\+Found)
+\begin{DoxyCompactList}\small\item\em Unit test to check if path is found. \end{DoxyCompactList}\item 
+\hyperlink{test_8cpp_a2c33759c44e5abe6f672de2017ff387f}{T\+E\+ST} (Path\+Not\+Found, Return\+Minus\+One\+If\+Not\+Found)
+\begin{DoxyCompactList}\small\item\em Unit test to check if path is not found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains Unit tests. 
+
+Defines several unit tests to check the correct behavior of various methods in \hyperlink{classNode}{Node}, \hyperlink{classMap}{Map} and \hyperlink{classAStar}{A\+Star} class
+
+\begin{DoxyAuthor}{Author}
+Pranav Inani 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+2017 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\index{test.\+cpp@{test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Heuristic\+Test, Check\+Calculated\+Distance)}{TEST(HeuristicTest, CheckCalculatedDistance)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Heuristic\+Test}]{, }
+\item[{Check\+Calculated\+Distance}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_a57cac6e439db434ca1213372c5f6b873}{}\label{test_8cpp_a57cac6e439db434ca1213372c5f6b873}
+
+
+Unit test for Heuristic Calculation. 
+
+Checks if Heuristic function is returning the expected distance value \index{test.\+cpp@{test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Path\+Cost\+Test, Check\+Path\+Cost\+Calculation)}{TEST(PathCostTest, CheckPathCostCalculation)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Path\+Cost\+Test}]{, }
+\item[{Check\+Path\+Cost\+Calculation}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_a2bb99463b6ac087913c231778e0b714c}{}\label{test_8cpp_a2bb99463b6ac087913c231778e0b714c}
+
+
+Unit test for path cost calculation. 
+
+Checks if the function is returning the expected value of path cost \index{test.\+cpp@{test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Total\+Cost\+Test, F\+Is\+Greater)}{TEST(TotalCostTest, FIsGreater)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Total\+Cost\+Test}]{, }
+\item[{F\+Is\+Greater}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_a9b0631f71faa4616d77d30304433b60b}{}\label{test_8cpp_a9b0631f71faa4616d77d30304433b60b}
+
+
+Unit test total function cost calculation. 
+
+Checks if function is returning the expected value of the total function cost \index{test.\+cpp@{test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Operator\+Test, Test\+Min\+Priority\+Q)}{TEST(OperatorTest, TestMinPriorityQ)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Operator\+Test}]{, }
+\item[{Test\+Min\+PriorityQ}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_a1036e70cf8f103cd4ded740c4ace372f}{}\label{test_8cpp_a1036e70cf8f103cd4ded740c4ace372f}
+
+
+Unit test for checking the overloaded \textquotesingle{}$>$\textquotesingle{} operator. 
+
+Checks if the node with greater total cost is given priority \index{test.\+cpp@{test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Goal\+Blocked, Path\+Not\+Found)}{TEST(GoalBlocked, PathNotFound)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Goal\+Blocked}]{, }
+\item[{Path\+Not\+Found}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_a59329afeb275aab7cb4f7a39168f2779}{}\label{test_8cpp_a59329afeb275aab7cb4f7a39168f2779}
+
+
+Unit test to check if goal node is blocked. 
+
+If goal node is blocked path won\textquotesingle{}t be found \index{test.\+cpp@{test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Start\+Walkable, Map\+Value\+Is\+One)}{TEST(StartWalkable, MapValueIsOne)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Start\+Walkable}]{, }
+\item[{Map\+Value\+Is\+One}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_a114fc18553609e0ae6fbbed847b320a0}{}\label{test_8cpp_a114fc18553609e0ae6fbbed847b320a0}
+
+
+Unit test to check if start node is walkable. 
+
+Asserts that start node should never be an obstacle \index{test.\+cpp@{test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Path\+Found, Return\+One\+If\+Found)}{TEST(PathFound, ReturnOneIfFound)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Path\+Found}]{, }
+\item[{Return\+One\+If\+Found}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_a6cb5e3cfec6c4f38a6be2a24046fcf6d}{}\label{test_8cpp_a6cb5e3cfec6c4f38a6be2a24046fcf6d}
+
+
+Unit test to check if path is found. 
+
+If a path is found print\+Path function should return 1 \index{test.\+cpp@{test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!test.\+cpp@{test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Path\+Not\+Found, Return\+Minus\+One\+If\+Not\+Found)}{TEST(PathNotFound, ReturnMinusOneIfNotFound)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Path\+Not\+Found}]{, }
+\item[{Return\+Minus\+One\+If\+Not\+Found}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{test_8cpp_a2c33759c44e5abe6f672de2017ff387f}{}\label{test_8cpp_a2c33759c44e5abe6f672de2017ff387f}
+
+
+Unit test to check if path is not found. 
+
+If a path is not found print\+Path function should return -\/1 

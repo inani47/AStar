@@ -1,0 +1,87 @@
+\hypertarget{classMap}{}\section{Map Class Reference}
+\label{classMap}\index{Map@{Map}}
+
+
+Defines the \hyperlink{classMap}{Map} class.  
+
+
+
+
+{\ttfamily \#include $<$Map.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \hyperlink{classMap_ab0ba13c90105c4ad77814d4cfb6a35ab}{create\+Map} ()
+\begin{DoxyCompactList}\small\item\em creates a 10x10 map with obstacles placed randomly \end{DoxyCompactList}\item 
+int \hyperlink{classMap_a5648dc8e0a2848035ff28230219e80fd}{print\+Path} (std\+::vector$<$ std\+::vector$<$ int $>$ $>$, std\+::vector$<$ int $>$, int, int, int, int)
+\begin{DoxyCompactList}\small\item\em Prints the path from start to goal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the \hyperlink{classMap}{Map} class. 
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Map@{Map}!create\+Map@{create\+Map}}
+\index{create\+Map@{create\+Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{create\+Map()}{createMap()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::vector$<$ int $>$ $>$ Map\+::create\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classMap_ab0ba13c90105c4ad77814d4cfb6a35ab}{}\label{classMap_ab0ba13c90105c4ad77814d4cfb6a35ab}
+
+
+creates a 10x10 map with obstacles placed randomly 
+
+A 10x10 vector of vectors of int is initialez with all values set to 1 Then 20 elemnts are randomly set to 0 to act as obstacles
+
+\begin{DoxyReturn}{Returns}
+10x10 map 
+\end{DoxyReturn}
+\index{Map@{Map}!print\+Path@{print\+Path}}
+\index{print\+Path@{print\+Path}!Map@{Map}}
+\subsubsection[{\texorpdfstring{print\+Path(std\+::vector$<$ std\+::vector$<$ int $>$ $>$, std\+::vector$<$ int $>$, int, int, int, int)}{printPath(std::vector< std::vector< int > >, std::vector< int >, int, int, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Map\+::print\+Path (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$}]{\+\_\+map, }
+\item[{std\+::vector$<$ int $>$}]{path, }
+\item[{int}]{sx, }
+\item[{int}]{sy, }
+\item[{int}]{gx, }
+\item[{int}]{gy}
+\end{DoxyParamCaption}
+)}\hypertarget{classMap_a5648dc8e0a2848035ff28230219e80fd}{}\label{classMap_a5648dc8e0a2848035ff28230219e80fd}
+
+
+Prints the path from start to goal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+map} & is the map with all the nodes (walkable nodes as well as obstacles) \\
+\hline
+{\em path} & is the map containing direction to the parent of each node to trace path \\
+\hline
+{\em sx} & is the x coordinate of start \\
+\hline
+{\em sy} & is the y coordinate of start \\
+\hline
+{\em gx} & is the x coordinate of goal \\
+\hline
+{\em gy} & is the y coordinate of goal\\
+\hline
+\end{DoxyParams}
+traces the path from start to goal using path prints \textquotesingle{}\#\textquotesingle{} in place of obstacle prints \textquotesingle{}S\textquotesingle{} for start node prints \textquotesingle{}G\textquotesingle{} for goal node prints \textquotesingle{}$\ast$\textquotesingle{} for path prints \textquotesingle{}.\textquotesingle{} for all other walkable nodes
+
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Map_8h}{Map.\+h}\item 
+app/\hyperlink{Map_8cpp}{Map.\+cpp}\end{DoxyCompactItemize}

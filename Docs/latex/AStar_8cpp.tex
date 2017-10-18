@@ -1,0 +1,70 @@
+\hypertarget{AStar_8cpp}{}\section{app/\+A\+Star.cpp File Reference}
+\label{AStar_8cpp}\index{app/\+A\+Star.\+cpp@{app/\+A\+Star.\+cpp}}
+
+
+Implements A$\ast$ algorithm.  
+
+
+{\ttfamily \#include $<$A\+Star.\+h$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$queue$>$}\\*
+Include dependency graph for A\+Star.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AStar_8cpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{AStar_8cpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{AStar_8cpp_a6f3e17f3c0a31d1fae6b2569521a8e67}{operator$>$} (const \hyperlink{classNode}{Node} \&p, const \hyperlink{classNode}{Node} \&q)
+\begin{DoxyCompactList}\small\item\em overloads the \textquotesingle{}$>$\textquotesingle{} operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements A$\ast$ algorithm. 
+
+Defines path\+Finding function that find the path Defines function to overload \textquotesingle{}$>$\textquotesingle{} operator to implement minimum priority queue Defines constructor and destructor
+
+\begin{DoxyAuthor}{Author}
+Pranav Inani 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+2017 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\index{A\+Star.\+cpp@{A\+Star.\+cpp}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!A\+Star.\+cpp@{A\+Star.\+cpp}}
+\subsubsection[{\texorpdfstring{operator$>$(const Node \&p, const Node \&q)}{operator>(const Node &p, const Node &q)}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{p, }
+\item[{const {\bf Node} \&}]{q}
+\end{DoxyParamCaption}
+)}\hypertarget{AStar_8cpp_a6f3e17f3c0a31d1fae6b2569521a8e67}{}\label{AStar_8cpp_a6f3e17f3c0a31d1fae6b2569521a8e67}
+
+
+overloads the \textquotesingle{}$>$\textquotesingle{} operator 
+
+gives priority to node with greater total cosr
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & is a reference of a node \\
+\hline
+{\em q} & is a reference of a node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the total cost of p is greater, else false 
+\end{DoxyReturn}

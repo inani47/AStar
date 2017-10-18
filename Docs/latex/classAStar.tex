@@ -1,0 +1,129 @@
+\hypertarget{classAStar}{}\section{A\+Star Class Reference}
+\label{classAStar}\index{A\+Star@{A\+Star}}
+
+
+Defines the \hyperlink{classAStar}{A\+Star} class.  
+
+
+
+
+{\ttfamily \#include $<$A\+Star.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classAStar_a0903f971fd29f74179cf269db934a469}{A\+Star} (int \+\_\+startx, int \+\_\+starty, int \+\_\+goalx, int \+\_\+goaly)
+\begin{DoxyCompactList}\small\item\em Constructor for initializing goal and start coordinates. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \hyperlink{classAStar_aa63c6af8c1c0fa4f422775e75ba61c35}{path\+Find} (std\+::vector$<$ std\+::vector$<$ int $>$ $>$ vec)
+\begin{DoxyCompactList}\small\item\em finds the path of directions from start to goal \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries startx}\hypertarget{classAStar_a7beab7460a53378df536e95d36926082}{}\label{classAStar_a7beab7460a53378df536e95d36926082}
+
+\item 
+int {\bfseries starty}\hypertarget{classAStar_a63e9ef8b8a53b36084cc496d9f765415}{}\label{classAStar_a63e9ef8b8a53b36084cc496d9f765415}
+
+\item 
+int {\bfseries goalx}\hypertarget{classAStar_aed7140142494cdae9d05ef4f01349c5f}{}\label{classAStar_aed7140142494cdae9d05ef4f01349c5f}
+
+\item 
+int {\bfseries goaly}\hypertarget{classAStar_a02edb859e745c730e450e9f18be7f90b}{}\label{classAStar_a02edb859e745c730e450e9f18be7f90b}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classAStar_a1ac82d7bfc70d9941cc1e12baf250b75}{operator$>$} (const \hyperlink{classNode}{Node} \&, const \hyperlink{classNode}{Node} \&)
+\begin{DoxyCompactList}\small\item\em overloads the \textquotesingle{}$>$\textquotesingle{} operator \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the \hyperlink{classAStar}{A\+Star} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em startx} & is the x coordinate of the start node \\
+\hline
+{\em starty} & is the y coordinate of the start node \\
+\hline
+{\em goalx} & is the x coordinate of the goal node \\
+\hline
+{\em goaly} & is the x coordinate of the goal node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{A\+Star@{A\+Star}!A\+Star@{A\+Star}}
+\index{A\+Star@{A\+Star}!A\+Star@{A\+Star}}
+\subsubsection[{\texorpdfstring{A\+Star(int \+\_\+startx, int \+\_\+starty, int \+\_\+goalx, int \+\_\+goaly)}{AStar(int _startx, int _starty, int _goalx, int _goaly)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+Star\+::\+A\+Star (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+startx, }
+\item[{int}]{\+\_\+starty, }
+\item[{int}]{\+\_\+goalx, }
+\item[{int}]{\+\_\+goaly}
+\end{DoxyParamCaption}
+)}\hypertarget{classAStar_a0903f971fd29f74179cf269db934a469}{}\label{classAStar_a0903f971fd29f74179cf269db934a469}
+
+
+Constructor for initializing goal and start coordinates. 
+
+intitializes the coordinates of start \& goal coordinates 
+
+\subsection{Member Function Documentation}
+\index{A\+Star@{A\+Star}!path\+Find@{path\+Find}}
+\index{path\+Find@{path\+Find}!A\+Star@{A\+Star}}
+\subsubsection[{\texorpdfstring{path\+Find(std\+::vector$<$ std\+::vector$<$ int $>$ $>$ vec)}{pathFind(std::vector< std::vector< int > > vec)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ int $>$ A\+Star\+::path\+Find (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ int $>$ $>$}]{vec}
+\end{DoxyParamCaption}
+)}\hypertarget{classAStar_aa63c6af8c1c0fa4f422775e75ba61c35}{}\label{classAStar_aa63c6af8c1c0fa4f422775e75ba61c35}
+
+
+finds the path of directions from start to goal 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & is a map which holds info if a node is walkable or blocked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+path with parent directions from start to goal 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\index{A\+Star@{A\+Star}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!A\+Star@{A\+Star}}
+\subsubsection[{\texorpdfstring{operator$>$}{operator>}}]{\setlength{\rightskip}{0pt plus 5cm}bool operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Node} \&}]{p, }
+\item[{const {\bf Node} \&}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{classAStar_a1ac82d7bfc70d9941cc1e12baf250b75}{}\label{classAStar_a1ac82d7bfc70d9941cc1e12baf250b75}
+
+
+overloads the \textquotesingle{}$>$\textquotesingle{} operator 
+
+gives priority to node with greater total cosr
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & is a reference of a node \\
+\hline
+{\em q} & is a reference of a node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the total cost of p is greater, else false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{AStar_8h}{A\+Star.\+h}\item 
+app/\hyperlink{AStar_8cpp}{A\+Star.\+cpp}\end{DoxyCompactItemize}

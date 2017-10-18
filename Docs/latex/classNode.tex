@@ -1,0 +1,150 @@
+\hypertarget{classNode}{}\section{Node Class Reference}
+\label{classNode}\index{Node@{Node}}
+
+
+Defines the \hyperlink{classNode}{Node} class.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNode_ae024f3b6f5de061d2c4217694191a588}{Node} (int, int, int, int)
+\begin{DoxyCompactList}\small\item\em Constructor for creating an object of \hyperlink{classNode}{Node}. \end{DoxyCompactList}\item 
+int \hyperlink{classNode_aab7e2a290b16052153e68f2c45957cab}{heuristic} (int, int)
+\begin{DoxyCompactList}\small\item\em Calculates the Euclidian Distance between the current node and goal. \end{DoxyCompactList}\item 
+int \hyperlink{classNode_abbad479d38bd75d58161d20ccf2dda40}{g\+Cal} (int)
+\begin{DoxyCompactList}\small\item\em Calculates the path cost of a node. \end{DoxyCompactList}\item 
+int \hyperlink{classNode_a7408eba08654dabf91908cf129ed2864}{f\+Cal} (int, int)
+\begin{DoxyCompactList}\small\item\em calculates total cost \end{DoxyCompactList}\item 
+\hyperlink{classNode_aa0840c3cb5c7159be6d992adecd2097c}{$\sim$\+Node} ()\hypertarget{classNode_aa0840c3cb5c7159be6d992adecd2097c}{}\label{classNode_aa0840c3cb5c7159be6d992adecd2097c}
+
+\begin{DoxyCompactList}\small\item\em Destructor of \hyperlink{classNode}{Node} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries total\+Cost}\hypertarget{classNode_af4b1d1d4e9b82aaa1ea2e31d41685197}{}\label{classNode_af4b1d1d4e9b82aaa1ea2e31d41685197}
+
+\item 
+int {\bfseries path\+Cost}\hypertarget{classNode_acdb897b0fb532785c6356b19fc62042e}{}\label{classNode_acdb897b0fb532785c6356b19fc62042e}
+
+\item 
+int {\bfseries x}\hypertarget{classNode_aff1029a518bdc2651007b8856f958364}{}\label{classNode_aff1029a518bdc2651007b8856f958364}
+
+\item 
+int {\bfseries y}\hypertarget{classNode_aa3e5b5240023b4528ae85057b3324202}{}\label{classNode_aa3e5b5240023b4528ae85057b3324202}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines the \hyperlink{classNode}{Node} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Cost} & stores the heuristic plus path\+Cost \\
+\hline
+{\em path\+Cost} & stores the cost incurrened to move to current node \\
+\hline
+{\em x} & is the x coordinate of the node \\
+\hline
+{\em y} & is the y coordinate of the node\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{\texorpdfstring{Node(int, int, int, int)}{Node(int, int, int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}Node\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+x, }
+\item[{int}]{\+\_\+y, }
+\item[{int}]{\+\_\+g, }
+\item[{int}]{\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_ae024f3b6f5de061d2c4217694191a588}{}\label{classNode_ae024f3b6f5de061d2c4217694191a588}
+
+
+Constructor for creating an object of \hyperlink{classNode}{Node}. 
+
+intitializes the coordinates of the node, the path cost and total cost 
+
+\subsection{Member Function Documentation}
+\index{Node@{Node}!f\+Cal@{f\+Cal}}
+\index{f\+Cal@{f\+Cal}!Node@{Node}}
+\subsubsection[{\texorpdfstring{f\+Cal(int, int)}{fCal(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::f\+Cal (
+\begin{DoxyParamCaption}
+\item[{int}]{a, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_a7408eba08654dabf91908cf129ed2864}{}\label{classNode_a7408eba08654dabf91908cf129ed2864}
+
+
+calculates total cost 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & is the x coordinate of the goal \\
+\hline
+{\em b} & is the y coordinate of the goal\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sum of the path cost and heuristic 
+\end{DoxyReturn}
+\index{Node@{Node}!g\+Cal@{g\+Cal}}
+\index{g\+Cal@{g\+Cal}!Node@{Node}}
+\subsubsection[{\texorpdfstring{g\+Cal(int)}{gCal(int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::g\+Cal (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_abbad479d38bd75d58161d20ccf2dda40}{}\label{classNode_abbad479d38bd75d58161d20ccf2dda40}
+
+
+Calculates the path cost of a node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & is the direction of the next movement in x and y direction\\
+\hline
+\end{DoxyParams}
+if the movement is diagonal path cost of 14 is incurred if the movement is a straight line then path cost of 10 is incurred
+
+\begin{DoxyReturn}{Returns}
+total path cost from start node to current node 
+\end{DoxyReturn}
+\index{Node@{Node}!heuristic@{heuristic}}
+\index{heuristic@{heuristic}!Node@{Node}}
+\subsubsection[{\texorpdfstring{heuristic(int, int)}{heuristic(int, int)}}]{\setlength{\rightskip}{0pt plus 5cm}int Node\+::heuristic (
+\begin{DoxyParamCaption}
+\item[{int}]{\+\_\+goalx, }
+\item[{int}]{\+\_\+goaly}
+\end{DoxyParamCaption}
+)}\hypertarget{classNode_aab7e2a290b16052153e68f2c45957cab}{}\label{classNode_aab7e2a290b16052153e68f2c45957cab}
+
+
+Calculates the Euclidian Distance between the current node and goal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+goalx} & is the x coordinate of goal \\
+\hline
+{\em \+\_\+goaly} & is the y coordinate of goal\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the distance in int 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{Node_8h}{Node.\+h}\item 
+app/\hyperlink{Node_8cpp}{Node.\+cpp}\end{DoxyCompactItemize}
