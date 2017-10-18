@@ -45,6 +45,18 @@
 #ifndef INCLUDE_NODE_H_
 #define INCLUDE_NODE_H_
 #include <cmath>
+/**
+ *
+ * @brief Defines the Node class
+ *
+ * @param totalCost stores the heuristic plus pathCost
+ * @param pathCost stores the cost incurrened to move to current node
+ * @param x is the x coordinate of the node
+ * @param y is the y coordinate of the node
+ *
+ * @return none
+ *
+ */
 class Node {
  public:
   int totalCost, pathCost;

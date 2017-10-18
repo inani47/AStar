@@ -40,13 +40,20 @@
  *  @author Pranav Inani
  *  @copyright 2017
  */
-
 #ifndef INCLUDE_MAP_H_
 #define INCLUDE_MAP_H_
 #include<vector>
 #include<random>
 #include<Node.h>
 #include<iostream>
+/**
+ *
+ * @brief Defines the Map class
+ *
+ *
+ * @return none
+ *
+ */
 class Map {
  public:
   std::vector<std::vector<int> > createMap();

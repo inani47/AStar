@@ -48,6 +48,18 @@
 #include <vector>
 #include <Node.h>
 #include <Map.h>
+/**
+ *
+ * @brief Defines the AStar class
+ *
+ * @param startx is the x coordinate of the start node
+ * @param starty is the y coordinate of the start node
+ * @param goalx is the x coordinate of the goal node
+ * @param goaly is the x coordinate of the goal node
+ *
+ * @return none
+ *
+ */
 class AStar {
  public:
   int startx;
